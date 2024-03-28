@@ -83,22 +83,16 @@ function SortingComponent() {
 				<label className='sliderLabel'>
 					Delay
 					<br />
-					<input type='range' min='5' max='200' onChange={(e) => { changeDelay(e.target.value) }} />
+					<input type='range' min='5' max='200' defaultValue='10' onChange={(e) => { changeDelay(e.target.value) }} />
 				</label>
 				<br />
 				<br />
 				<div><button className='btn' onClick={resetArr}>Generate array</button></div>
-				<div><button className='btn' id='msort' onClick={mergeSort}>mergeSort Sort</button></div>
-				<div><button className='btn' id='qsort' onClick={quickSort}>Quick Sort</button></div>
-				<div><button className='btn' id='bsort' onClick={bubbleSort}>Bubble Sort</button></div>
-				<div><button className='btn' id='ssort' onClick={selectionSort}>Selection Sort</button></div>
-				<div><button className='btn' id='isort' onClick={insertionSort}>Insertion Sort</button></div>
-				<div>
-					<br />
-					<a href="https://github.com/jindal2209/Sorting_Visualizer/fork" target='_blank' rel='noreferrer' >
-						<img style={{ width: '90px' }} src={process.env.PUBLIC_URL + "/iff.png"} alt='myGithub' />
-					</a>
-				</div>
+				<div><button className='btn' id='msort' onClick={mergeSort}>mergeSort <br></br>  O(n log (n)) </button></div>
+				<div><button className='btn' id='qsort' onClick={quickSort}>Quick Sort <br></br>  O(n log (n)) - O(n^2)</button></div>
+				<div><button className='btn' id='isort' onClick={insertionSort}>Insertion Sort<br></br> O(n) - O(n^2)</button></div>
+				<div><button className='btn' id='bsort' onClick={bubbleSort}>Bubble Sort <br></br>  O(n^2)</button></div>
+				<div><button className='btn' id='ssort' onClick={selectionSort}>Selection Sort <br></br>  O(n^2)</button></div>
 			</div>
 
 			<div className='array'>
